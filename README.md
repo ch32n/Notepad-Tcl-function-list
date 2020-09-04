@@ -12,7 +12,7 @@ Add tcl language assosiation to \<associationMap>
 <association id= "tcl_syntax" langID="29"/>
 ```
 
-add tcl parser to \<parsers>
+Add tcl parser to \<parsers>
 
 ```
 <parser id="tcl_syntax" displayName="TCL" commentExpr="(#)">
@@ -48,4 +48,4 @@ add tcl parser to \<parsers>
 </parser>
 ```
 
-restart notepad++
+Restart notepad++

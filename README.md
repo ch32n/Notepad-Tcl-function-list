@@ -4,9 +4,9 @@ Tcl parser for notepad++ function list. Supports tcl procedures, namespaces, cla
 
 ## How to activate
 
-Edit FunctionList.xml in %appdata%\notepad++ or instalation folder of notepad++ (FunctionList.xml in %appdata%\notepad++ should be deleted in this case).
+Edit FunctionList.xml in %appdata%\notepad++ or installation folder of notepad++ (FunctionList.xml in %appdata%\notepad++ should be deleted in this case).
 
-Add tcl language assosiation to \<associationMap>
+Add tcl language association to \<associationMap>
 
 ```
 <association id= "tcl_syntax" langID="29"/>

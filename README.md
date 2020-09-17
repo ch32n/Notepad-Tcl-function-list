@@ -17,7 +17,7 @@ Add tcl parser to \<parsers>
 ```
 <parser id="tcl_syntax" displayName="TCL" commentExpr="(#)">
     <classRange
-        mainExpr="^[\t ]*((oo::class[\s]+create)|(namespace[\s]+eval))[\s]+[^\n]+\{"
+        mainExpr="^[\t ]*((oo::(class|abstract)[\s]+create)|(namespace[\s]+eval))[\s]+[^\n]+\{"
         openSymbole = "\{"
         closeSymbole = "\}"
         displayMode="node">
@@ -27,7 +27,7 @@ Add tcl parser to \<parsers>
             <nameExpr expr="[\w:]+"/>
         </className>
         <function
-            mainExpr="^[\t ]*(((proc|method)\s+[\x21-\x7E]+)|constructor|destructor)[^\n]+?\{">
+            mainExpr="^[\t ]*(((proc|((private|public)\s)?method)\s+[\x21-\x7E]+)|constructor|destructor)[^\n]+?\{">
             <functionName>
                 <funcNameExpr expr="[\w_\-.]+[\s]+\{"/>
                 <funcNameExpr expr="[\w_\-.]+"/>
@@ -35,7 +35,7 @@ Add tcl parser to \<parsers>
         </function>
     </classRange>
     <function
-        mainExpr="^[\t ]*(((proc|method)\s+[\x21-\x7E]+)|constructor|destructor)[^\n]+?\{"
+        mainExpr="^[\t ]*(((proc|((private|public)\s)?method)\s+[\x21-\x7E]+)|constructor|destructor)[^\n]+?\{">
         displayMode="$className->$functionName">
         <functionName>
             <nameExpr expr="[\w_\-.]+[\s]+\{"/>
